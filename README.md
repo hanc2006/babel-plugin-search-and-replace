@@ -2,11 +2,11 @@
 
 ## What it does ?
 
-It replace string you choosed during babel runtime
+It replace string you choosed during babel runtime with one or multiple regex expression
 
 ## How to use it ?
 
-- `yarn add babel-plugin-search-and-replace -DE` or `npm i babel-plugin-search-and-replace --save-dev --exact`
+- `npm i -D babel-plugin-search-and-replace`
 
 - Add the following lines in your .babelrc
 
@@ -18,12 +18,9 @@ It replace string you choosed during babel runtime
       {
         "rules": [
           {
-            "search": "searchedString",
+            "search": "regex",
             "replace": "replacement"
-          },
-          {
-            "search": /myRegex/,
-            "replace": "replacement"
+            "flag": "g"
           }
         ]
       }
@@ -31,31 +28,7 @@ It replace string you choosed during babel runtime
   ]
 }
 ```
-
-For Babel < 7 use babel-plugin-search-and-replace@0.3.0
-
-```json
-{
-  "plugins": [
-    [
-      "search-and-replace",
-      [
-        {
-          "search": "searchedString",
-          "replace": "replacement"
-        },
-        {
-          "search": /myRegex/,
-          "replace": "replacement"
-        }
-      ]
-    ]
-  ]
-}
-```
+## Valid regex flag
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 
 - Enjoy
-
-- And, that's all
-
-- Really that's all ;)
