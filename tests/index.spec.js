@@ -18,7 +18,7 @@ it("should replace nothing", () => {
   expect(code).toMatchSnapshot();
 });
 
-it("shouldn't replace foo by bar", () => {
+it("should replace foo with moo", () => {
   const { code } = babel.transform(example, {
     plugins: [
       [
@@ -27,49 +27,8 @@ it("shouldn't replace foo by bar", () => {
           rules: [
             {
               search: "foo",
-              replace: "bar"
-            }
-          ]
-        }
-      ]
-    ]
-  });
-  expect(code).toMatchSnapshot();
-});
-
-it("should replace hello by hey", () => {
-  const { code } = babel.transform(example, {
-    plugins: [
-      [
-        searchAndReplaceplugin,
-        {
-          rules: [
-            {
-              search: "foo",
-              replace: "bar"
-            },
-            {
-              search: "hello",
-              replace: "hey"
-            }
-          ]
-        }
-      ]
-    ]
-  });
-  expect(code).toMatchSnapshot();
-});
-
-it("should replace el by aze", () => {
-  const { code } = babel.transform(example, {
-    plugins: [
-      [
-        searchAndReplaceplugin,
-        {
-          rules: [
-            {
-              search: /el/,
-              replace: "aze"
+              replace: "moo",
+              flag: "g"
             }
           ]
         }
