@@ -19,7 +19,7 @@ It replace string you choosed during babel runtime with one or multiple regex ex
         "rules": [
           {
             "search": "regex",
-            "replace": "replacement"
+            "replace": "replacement",
             "flag": "g"
           }
         ]
