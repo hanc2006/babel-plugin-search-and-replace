@@ -1,9 +1,12 @@
 {
   "name": "babel-plugin-search-and-replace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
-  "repository": "https://github.com/the-smaug/babel-plugin-search-and-replace",
+  "repository": "https://github.com/hanc2006/babel-plugin-search-and-replace",
   "author": "maxime blanc <maximeblanc.dev@gmail.com>",
+  "contributors": [
+    "Daniele Rapisarda <hanc2006@gmail.com>"
+  ]
   "license": "MIT",
   "scripts": {
     "test": "jest",
